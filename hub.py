@@ -1,18 +1,25 @@
 from tkinter import *
 from subprocess import Popen
-
-def tyngde():
+#åbner et andet program
+def tungde():
     Popen('python tyngde.py')
 
 #laver vinduet
 mainHub = Tk()
 
-hub = Label(mainHub, text="hello world")
+space = Label(mainHub, text="           ")
+space2 = Label(mainHub, text="           ")
 
-hub.grid(row=0, column=0)
+mennavn = Label(mainHub, text="Hoved Menu")
 
-densButton = Button(mainHub, text="rør ved mig", command=tyngde)
+space.grid(row=0, column=0)
+mennavn.grid(row=0, column=1)
+space2.grid(row=0, column=2)
 
-densButton.grid(row=1, column=0)
+densButton = Button(mainHub, text="Tyngdekraft", command=tungde)
+
+space.grid(row=1, column=0)
+densButton.grid(row=1, column=1)
+space2.grid(row=1, column=2)
 
 mainHub.mainloop()
