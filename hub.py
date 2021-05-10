@@ -3,11 +3,17 @@ from subprocess import Popen
 #åbner et andet program
 def tungde():
     Popen('python tyngde.py')
-def dens():
-    Popen('python Densitet.py')
+
+def dens(mainHub):
+    #Popen('python Densitet.py')
+    mainHub.destroy()
+    import Densitet.py
+
 
 #laver vinduet
 mainHub = Tk()
+
+
 
 mainHub.geometry('600x400')
 
@@ -26,7 +32,7 @@ space.grid(row=1, column=0)
 tungButton.grid(row=1, column=1)
 space2.grid(row=1, column=2)
 
-densButton = Button(mainHub, text="Densitet", command=dens)
+densButton = Button(mainHub, text="Densitet", command=lambda: dens(mainHub))
 
 space.grid(row=2, column=0)
 densButton.grid(row=2, column=1)
