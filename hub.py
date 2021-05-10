@@ -1,13 +1,10 @@
 from tkinter import *
-from subprocess import Popen
-#åbner et andet program
+
 def tungde(mainHub):
     mainHub.destroy()
     import tyngde.py
-    #Popen('python tyngde.py')
-
+ 
 def dens(mainHub):
-    #Popen('python Densitet.py')
     mainHub.destroy()
     import Densitet.py
 
@@ -43,6 +40,12 @@ densButton = Button(mainHub, text="Densitet", command=lambda: dens(mainHub))
 space.grid(row=2, column=0)
 densButton.grid(row=2, column=1)
 space2.grid(row=2, column=2)
+
+energiButton = Button(mainHub, text="Energi", command=lambda: energi(mainHub))
+
+space.grid(row=3, column=0)
+energiButton.grid(row=3, column=1)
+space2.grid(row=3, column=2)
 
 
 mainHub.mainloop()
