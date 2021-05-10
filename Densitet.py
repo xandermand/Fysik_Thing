@@ -1,13 +1,10 @@
 import tkinter as tk
-from subprocess import Popen
-
-
 
 
 #Vindue
 vindue = tk.Tk()
 
-forklaring = tk.Label(text="Tryk på den tekstboks der indeholder den information du har")
+forklaring = tk.Label(text="Tryk på den knap der indeholder den information du har")
 
 #densitet/volumen
 def mulighed1(vindue):

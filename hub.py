@@ -11,6 +11,10 @@ def dens(mainHub):
     mainHub.destroy()
     import Densitet.py
 
+def energi(mainhub):
+    mainHub.destroy()
+    import Energi_Visualisering.py
+
 
 #laver vinduet
 mainHub = Tk()

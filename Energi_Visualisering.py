@@ -130,7 +130,9 @@ def find(mængde, vindue):
 
 vis_joule = tk.Button(text = "Tryk her, for at finde ud af hvad du kan bruge den mængde energi du har indtastet til", command = lambda: find(mængde, vindue))
 
+intro = tk.Label(text = "Indtast en mængde energi i joules.")
 
+intro.pack()
 mængde.pack()
 vis_joule.pack()
 
