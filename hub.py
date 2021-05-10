@@ -1,8 +1,10 @@
 from tkinter import *
 from subprocess import Popen
 #åbner et andet program
-def tungde():
-    Popen('python tyngde.py')
+def tungde(mainHub):
+    mainHub.destroy()
+    import tyngde.py
+    #Popen('python tyngde.py')
 
 def dens(mainHub):
     #Popen('python Densitet.py')
@@ -26,7 +28,7 @@ space.grid(row=0, column=0)
 mennavn.grid(row=0, column=1)
 space2.grid(row=0, column=2)
 
-tungButton = Button(mainHub, text="Tyngdekraft", command=tungde)
+tungButton = Button(mainHub, text="Tyngdekraft", command=lambda: tungde(mainHub))
 
 space.grid(row=1, column=0)
 tungButton.grid(row=1, column=1)

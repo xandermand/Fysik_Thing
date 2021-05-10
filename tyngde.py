@@ -1,6 +1,6 @@
 from tkinter import *
 from tkinter.ttk import *
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 from subprocess import Popen
 import math
 
@@ -41,7 +41,7 @@ def bpress():
     time = math.sqrt(res)
     reslab = Label(tungHub, text="Det tager " + str(time) + " sekunder for objektet at falde fra " + str(leng) + " meters højde med en tyngdeacceleration på " + str(tacc))
     reslab.grid(column=0, row=7)
-    plt.plot(leng, time, 'go--')
+    #plt.plot(leng, time, 'go--')
 
     
 
